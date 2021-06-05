@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dotazníček</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css')}}">
+</head>
+<body>
+ <h1>Vyplň dotazník!<h1>
+     <form method="POST">
+         <input type="radio" id="sport" name="interest" value="sport"> Sport
+         <input type="radio" id="hudba" name="interest" value="hudba"> Hudba
+         <input type="radio" id="kultura" name="interest" value="kultura"> Kultura
+         <br>
+         <input type = "submit">
+         {% if interest %}
+         <h1> Poslední zvolený zájem: {{ interest }} </h1>
+         {% endif %}
+     </form>
+</body>
+</html>
