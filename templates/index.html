@@ -8,9 +8,28 @@
 <body>
  <h1>Vyplň dotazník!<h1>
      <form method="POST">
-         <input type="radio" id="sport" name="interest" value="sport"> Sport
-         <input type="radio" id="hudba" name="interest" value="hudba"> Hudba
-         <input type="radio" id="kultura" name="interest" value="kultura"> Kultura
+         <input type="radio" name="nationality" value="0" id="cr" checked>
+         <label for="cr">ČR</label>
+         <input type="radio" name="nationality" value="1" id="sr">
+         <label for="sr">SR</label>
+         <input type="radio" name="nationality" value="2" id="nemecko">
+         <label for="nemecko">Německo</label>
+         <br>
+         <input type="radio" name="type" value="0" id="jeden"checked>
+         <label for="jeden">Jedinec</label>
+         <input type="radio" name="type" value="1" id="party">
+         <label for="party">Parta</label>
+         <input type="radio" name="type" value="2" id="family">
+         <label for="family">Rodina</label>
+         <input type="radio" name="type" value="3" id="pair">
+         <label for="pair">Pár</label>
+         <br>
+         <input type="radio" name="interest" value="0" id="sport" checked>
+         <label for="sport">Sport</label>
+         <input type="radio" name="interest" value="1" id="hudba">
+         <label for="hudba">Hudba</label>
+         <input type="radio" name="interest" value="2" id="kultura">
+         <label for="kultura">Kultura</label>
          <br>
          <input type = "submit">
          {% if interest %}
