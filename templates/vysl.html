@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>{{vysledek}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link
+href="https://fonts.googleapis.com/css?family=Open+Sans"
+rel="stylesheet"
+/>
+<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+<link
+href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css"
+rel="stylesheet"
+/>
+<style>
+body {
+padding: 0;
+}
+#map {
+position: absolute;
+top: 0;
+bottom: 0;
+width: 100%;
+
+}
+.marker {
+background-image: url("https://image.flaticon.com/icons/png/512/446/446075.png");
+background-size: cover;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+cursor: pointer;
+}
+.mapboxgl-popup {
+max-width: 200px;
+}
+.mapboxgl-popup-content {
+text-align: center;
+font-family: 'Open Sans', sans-serif;
+}
+</style>
+</head>
+<body>
+    <h1>{{vysledek}}</h1>
+<div id="map"></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWlsYW42MjYiLCJhIjoiY2twbGU4ajlkMDdjazJvcXFjaHdzdm1mNCJ9.SeBJ-pCQFcXQI9mX_1UOmg';
+
+var locations = 
+[
+    {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        title: 'Tohle je BOD!',
+        description: 'A zde bude popis bodu.'
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.390638828277588,
+          49.72399367993908
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        title: 'Tohle je BOD!',
+        description: 'A zde bude popis bodu'
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.365726470947266,
+          49.72323072777041
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        title: 'Tohle je BOD!',
+        description: 'A zde bude popis bodu'
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.354225158691406,
+          49.71576703611501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        title: 'Tohle je BOD!',
+        description: 'A zde bude popis bodu'
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.399286270141602,
+          49.7381269340524
+        ]
+      }
+    }
+  ]
+} , {
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.374309539794922,
+          49.74822157670514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.365039825439453,
+          49.737516750978024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.388214111328125,
+          49.74023478018286
+        ]
+      }
+    }
+  ]
+}
+
+
+
+]
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [13.354225158691406,49.71576703611501],
+zoom: 12
+});
+
+
+
+// add markers to map
+//bod(locations[1].features[0]);
+locations[0].features.forEach(bod);
+locations[1].features.forEach(bod);
+
+function bod (marker) {
+// create a HTML element for each feature
+var el = document.createElement('div');
+el.className = 'marker';
+
+
+// make a marker for each feature and add it to the map
+new mapboxgl.Marker(el)
+.setLngLat(marker.geometry.coordinates)
+.setPopup(
+new mapboxgl.Popup({ offset: 25 }) // add popups
+.setHTML(
+'<h3>' +
+marker.properties.title +
+'</h3><p>' +
+marker.properties.description +
+'</p>'
+)
+)
+.addTo(map);
+};
+
+console.log(geojson.features[0]);
+</script>
+
+</body>
+</html>
