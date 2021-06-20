@@ -24,14 +24,33 @@ bottom: 0;
 width: 100%;
 
 }
-.marker {
+.marker1 {
 background-image: url("https://image.flaticon.com/icons/png/512/446/446075.png");
+width: 70px;
+height: 70px;
 background-size: cover;
-width: 50px;
-height: 50px;
 border-radius: 50%;
 cursor: pointer;
 }
+
+.marker2 {
+background-image: url("https://image.flaticon.com/icons/png/512/446/446075.png");
+width: 50px;
+height: 50px;
+background-size: cover;
+border-radius: 50%;
+cursor: pointer;
+}
+
+.marker3 {
+background-image: url("https://image.flaticon.com/icons/png/512/446/446075.png");
+width: 30px;
+height: 30px;
+background-size: cover;
+border-radius: 50%;
+cursor: pointer;
+}
+
 .mapboxgl-popup {
 max-width: 200px;
 }
@@ -80,21 +99,7 @@ var locations =
           49.72323072777041
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        title: 'Tohle je BOD!',
-        description: 'A zde bude popis bodu'
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          13.354225158691406,
-          49.71576703611501
-        ]
-      }
-    },
+    }, 
     {
       "type": "Feature",
       "properties": {
@@ -147,11 +152,276 @@ var locations =
       }
     }
   ]
+} , 
+
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.413619995117188,
+          49.757392291287715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.367035388946533,
+          49.72291860751841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.338432312011719,
+          49.744290739607436
+        ]
+      }
+    }
+  ]
+} ,
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.382205963134766,
+          49.74714010831274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.409349918365479,
+          49.74063692463537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.368043899536133,
+          49.74278626088478
+        ]
+      }
+    }
+  ]
+} , 
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.38036060333252,
+          49.75282448014532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.365168571472168,
+          49.732357623780196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.404221534729004,
+          49.73279103930344
+        ]
+      }
+    }
+  ]
+} , 
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.37754964828491,
+          49.747500600455844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.379545211791992,
+          49.75848046204536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.413534164428711,
+          49.76355364922585
+        ]
+      }
+    }
+  ]
+} ,
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.359975814819336,
+          49.717598382656455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.382785320281982,
+          49.7399019684602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.413094282150269,
+          49.76257647821756
+        ]
+      }
+    }
+  ]
+} , 
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.397891521453856,
+          49.72366075683083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.414371013641357,
+          49.780834539554995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.338732719421387,
+          49.719207690785545
+        ]
+      }
+    }
+  ]
+} ,
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.424005508422852,
+          49.7399019684602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.396883010864258,
+          49.766547412257815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.356692790985107,
+          49.758785422717665
+        ]
+      }
+    }
+  ]
 }
-
-
-
 ]
+
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
@@ -162,15 +432,28 @@ zoom: 12
 
 
 // add markers to map
-//bod(locations[1].features[0]);
+//bod(locations[1].features[0], "marker2");
+//bod(locations[0].features[2], "marker");
 
-locations[0].features.forEach(bod);
-locations[1].features.forEach(bod);
+//locations[0].features.forEach(bod(locations[1].features[0], "marker"));
+//locations[1].features.forEach(bod("marker2"));
 
-function bod (marker) {
+pointsOnMap('{{vysledek[0]}}', "marker1");
+pointsOnMap('{{vysledek[1]}}', "marker2");
+pointsOnMap('{{vysledek[2]}}', "marker3");
+
+
+function pointsOnMap (i, markerType) {
+for (let index = 0; index < locations[i].features.length; index++) {
+  bod(locations[i].features[index], markerType);
+  console.log(index);
+}
+}
+
+function bod (marker, markerType) {
 // create a HTML element for each feature
 var el = document.createElement('div');
-el.className = 'marker';
+el.className = markerType;
 
 // make a marker for each feature and add it to the map
 new mapboxgl.Marker(el)
@@ -179,9 +462,11 @@ new mapboxgl.Marker(el)
 new mapboxgl.Popup({ offset: 25 }) // add popups
 .setHTML(
 '<h3>' +
-marker.properties.title +
+//marker.properties.title +
+'Tohle je BOD!'+
 '</h3><p>' +
-marker.properties.description +
+//marker.properties.description +
+'A zde bude popis bodu.' +
 '</p>'
 )
 )

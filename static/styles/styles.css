@@ -3,11 +3,107 @@ html, body {
 }
 
 html {
-    display: table;
-    margin: auto;
+    /*display: table;
+    margin: auto;*/
 }
 
 body {
-    display: table-cell;
-    vertical-align: middle;
+    /*display: table-cell;
+    vertical-align: middle;*/
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #333;
+    background-color: #eee;
+}
+
+h1, h2 {
+    font-weight: 200;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2fcc71;
+    max-width: 40%;
+    margin: 20px auto;
+}
+
+h2 {
+    margin-left: 4%;
+}
+
+.container {
+    width: 100%;
+    margin-left: 0;
+}
+
+.four {
+    width: 28%;
+    height: 40%;
+}
+
+.col {
+    display: block;
+    float: left;
+    margin: 1% 0 1% 4%;
+}
+
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+.form .plan input, .form .payment-plan input, .form .payment-type input {
+    display: none;
+}
+
+.form label {
+    position: relative;
+    color: #fff;
+    background-color: #aaa;
+    font-size: 26px;
+    text-align: center;
+    height: 150px;
+    line-height: 150px;
+    display: block;
+    cursor: pointer;
+    border: 3px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label {
+    border: 3px solid #333;
+    background-color: #2fcc71;
+}
+
+.submit {
+    width: 100vw;
+    align-items: center;
+    padding: 15px 60px;
+    border: none;
+    margin: 30px 4%;
+    background-color: #2fcc71;
+    color: #fff;
+    border: 2px solid #333;
+    font-size: 18px;
+    -webkit-transition: transform 1s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+
+.submit:hover {
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(20, 20, 20, 0.788); 
+    transition: 0.2s;
 }

@@ -32,13 +32,8 @@ def index():
         print("nejvyssi:", l.item(0))
         #print(l)
         vysledek = dst_lst[l.item(0)]
-        id = [l.item(0),l.item(1)]
-        if vysledek == "tenis" or vysledek == "minigolf" or vysledek == "volejbal":
-            return render_template('vysl.html', vysledek=id)
-        elif vysledek == "zámek" or vysledek == "hrad" or vysledek == "kostel":
-            return render_template('vysl2.html', vysledek=id)
-        else:
-            return render_template('vysl3.html', vysledek=id)
+        id = [l.item(0),l.item(1),l.item(2)]
+        return render_template('vysl.html', vysledek=id)
     else:
         return render_template('index.html')
 

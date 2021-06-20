@@ -6,35 +6,51 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/styles.css')}}">
 </head>
 <body>
- <h1>Vyplň dotazník!<h1>
-     <form method="POST">
-         <input type="radio" name="nationality" value="0" id="cr" checked>
-         <label for="cr">ČR</label>
-         <input type="radio" name="nationality" value="1" id="sr">
-         <label for="sr">SR</label>
-         <input type="radio" name="nationality" value="2" id="nemecko">
-         <label for="nemecko">Německo</label>
-         <br>
-         <input type="radio" name="type" value="0" id="jeden"checked>
-         <label for="jeden">Jedinec</label>
-         <input type="radio" name="type" value="1" id="pair">
-         <label for="pair">Pár</label>
-         <input type="radio" name="type" value="2" id="family">
-         <label for="family">Rodina</label>
-         <input type="radio" name="type" value="3" id="party">
-         <label for="party">Parta</label>
-         <br>
-         <input type="radio" name="interest" value="0" id="activities" checked>
-         <label for="activities">Aktivity</label>
-         <input type="radio" name="interest" value="1" id="culture">
-         <label for="culture">Kultura</label>
-         <input type="radio" name="interest" value="2" id="nature">
-         <label for="nature">Příroda</label>
-         <br>
-         <input type = "submit">
-         {% if interest %}
-         <h1> Poslední zvolený zájem: {{ interest }} </h1>
-         {% endif %}
-     </form>
+    <div class = "container">
+         <h1>Vyplň dotazník!</h1>
+         <form method="POST" class="form cf">
+             <section class="plan cf">
+                <h2>Národnost</h2>
+                <input type="radio" name="nationality" value="0" id="cr" checked>
+                <label class="cr-label four col" for="cr">ČR</label>
+                <input type="radio" name="nationality" value="1" id="sr">
+                <label class="sr-label four col" for="sr">SR</label>
+                <input type="radio" name="nationality" value="2" id="nemecko">
+                <label class="nemecko-label four col" for="nemecko">Německo</label>
+             </section>
+
+             <br>
+
+             <section class="payment-plan cf">
+                <h2>Nadpis</h2>
+                <input type="radio" name="type" value="0" id="jeden"checked>
+                <label class="jeden-label four col" for="jeden">Jedinec</label>
+                <input type="radio" name="type" value="1" id="pair">
+                <label class="pair-label four col" for="pair">Pár</label>
+                <input type="radio" name="type" value="2" id="family">
+                <label class="family-label four col" for="family">Rodina</label>
+                <input type="radio" name="type" value="3" id="party">
+                <label class="party-label four col" for="party">Parta</label>
+             </section>
+
+            <br>
+
+            <section class="payment-type cf">
+                <h2>Nadpis</h2>
+                <input type="radio" name="interest" value="0" id="activities" checked>
+                <label class="activities-label four col" for="activities">Aktivity</label>
+                <input type="radio" name="interest" value="1" id="culture">
+                <label class="culture-label four col" for="culture">Kultura</label>
+                <input type="radio" name="interest" value="2" id="nature">
+                <label class="nature-label four col" for="nature">Příroda</label>
+            </section>
+            <br>
+
+            <input class="submit" type="submit" value="Odeslat">
+            {% if interest %}
+            <h1> Poslední zvolený zájem: {{ interest }} </h1>
+            {% endif %}
+         </form>
+    </div>
 </body>
 </html>
