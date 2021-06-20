@@ -2,7 +2,6 @@ import random
 from sklearn.naive_bayes import GaussianNB
 list = []
 
-#pivovar divadlso JK tyla bazén borský park synagoga
 
 dst_lst = ['tenis','minigolf','volejbal','zámek','hrad','kostel','vodopád','kopec','skála']
 vys_vec =[]
@@ -11,9 +10,15 @@ for i in range(0,100):
     #narodnost
     oper_lst = []
 
+    #narodnost 0 - cr, 1 - sr, 2 - nemecko
     oper_lst.append(random.randint(0,2))
+
+    #group size 0 - jedinec, 1 - pár, 2 - rodina, 3 - parta
     oper_lst.append(random.randint(0,3))
+
+    #vyber 0 - aktivity, 1 - kultura, 2 - priroda
     posledni = random.randint(0,2)
+
     oper_lst.append(posledni)
     if posledni==0:
         vys_vec.append(random.randint(0,2))
