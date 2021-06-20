@@ -163,6 +163,7 @@ zoom: 12
 
 // add markers to map
 //bod(locations[1].features[0]);
+
 locations[0].features.forEach(bod);
 locations[1].features.forEach(bod);
 
@@ -170,7 +171,6 @@ function bod (marker) {
 // create a HTML element for each feature
 var el = document.createElement('div');
 el.className = 'marker';
-
 
 // make a marker for each feature and add it to the map
 new mapboxgl.Marker(el)
@@ -188,7 +188,8 @@ marker.properties.description +
 .addTo(map);
 };
 
-console.log(geojson.features[0]);
+
+console.log("{{vysledek}}");
 </script>
 
 </body>

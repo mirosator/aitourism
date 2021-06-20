@@ -24,12 +24,7 @@ def index():
         vysledek = dst_lst[x.item(0)]
         print(predict)
         print(x.item(0))
-        if vysledek == "tenis" or vysledek == "minigolf" or vysledek == "volejbal":
-            return render_template('vysl.html', vysledek=vysledek)
-        elif vysledek == "zámek" or vysledek == "hrad" or vysledek == "kostel":
-            return render_template('vysl2.html', vysledek=vysledek)
-        else:
-            return render_template('vysl3.html', vysledek=vysledek)
+        return render_template('vysl.html', vysledek=vysledek)
     else:
         return render_template('index.html')
 
