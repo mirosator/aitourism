@@ -3,8 +3,8 @@ html, body {
 }
 
 html {
-    /*display: table;
-    margin: auto;*/
+    /*display: table;*/
+    /*margin: auto;*/
 }
 
 body {
@@ -19,34 +19,31 @@ body {
 
 h1, h2 {
     font-weight: 200;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
     padding-bottom: 10px;
     border-bottom: 2px solid #2fcc71;
     max-width: 40%;
-    margin: 20px auto;
-}
-
-h2 {
-    margin-left: 4%;
+    margin: auto;
+    padding: 0.3%;
 }
 
 .container {
     width: 100%;
-    margin-left: 0;
+    margin-left: 0%;
 }
 
 .four {
-    width: 28%;
-    height: 40%;
+    width: 23%;
 }
 
 .col {
     display: block;
     float: left;
-    margin: 1% 0 1% 4%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
 }
 
 .cf:before, .cf:after {
@@ -59,7 +56,7 @@ h2 {
 }
 
 .cf {
-    *zoom: 1;
+    /**zoom: 80;*/
 }
 
 .form .plan input, .form .payment-plan input, .form .payment-type input {
@@ -88,11 +85,13 @@ h2 {
 }
 
 .submit {
-    width: 100vw;
-    align-items: center;
+    height: 100px;
+    margin: 2%;
+    width: 100%;
+    max-width: 350px;
     padding: 15px 60px;
+    display: inline-block;
     border: none;
-    margin: 30px 4%;
     background-color: #2fcc71;
     color: #fff;
     border: 2px solid #333;
@@ -102,8 +101,37 @@ h2 {
     transition: transform 0.3s ease-in-out;
 }
 
+.buttons {
+    display: flex;   justify-content: center;   align-items: center;
+}
+
 .submit:hover {
     cursor: pointer;
     box-shadow: 0 0 11px rgba(20, 20, 20, 0.788); 
     transition: 0.2s;
+}
+
+.form label:hover {
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(20, 20, 20, 0.788); 
+    transition: 0.2s;
+}
+
+#jednicka {
+    /*margin-left: 20%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dvojka {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#trojka {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

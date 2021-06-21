@@ -9,20 +9,21 @@
     <div class = "container">
          <h1>Vyplň dotazník!</h1>
          <form method="POST" class="form cf">
-             <section class="plan cf">
-                <h2>Národnost</h2>
+            <h2>Národnost</h2>
+            <section class="plan cf"  id="jednicka">
+
                 <input type="radio" name="nationality" value="0" id="cr" checked>
-                <label class="cr-label four col" for="cr">ČR</label>
+                <label class="cr-label four col" for="cr">Česká republika</label>
                 <input type="radio" name="nationality" value="1" id="sr">
-                <label class="sr-label four col" for="sr">SR</label>
+                <label class="sr-label four col" for="sr">Slovensko</label>
                 <input type="radio" name="nationality" value="2" id="nemecko">
                 <label class="nemecko-label four col" for="nemecko">Německo</label>
              </section>
 
              <br>
+             <h2>Druh</h2>
+             <section class="payment-plan cf" id="dvojka">
 
-             <section class="payment-plan cf">
-                <h2>Nadpis</h2>
                 <input type="radio" name="type" value="0" id="jeden"checked>
                 <label class="jeden-label four col" for="jeden">Jedinec</label>
                 <input type="radio" name="type" value="1" id="pair">
@@ -34,9 +35,9 @@
              </section>
 
             <br>
+            <h2>Zájmy</h2>
+            <section class="payment-type cf" id="trojka">
 
-            <section class="payment-type cf">
-                <h2>Nadpis</h2>
                 <input type="radio" name="interest" value="0" id="activities" checked>
                 <label class="activities-label four col" for="activities">Aktivity</label>
                 <input type="radio" name="interest" value="1" id="culture">
@@ -46,8 +47,11 @@
             </section>
             <br>
 
-            <input class="submit" type="submit" value="Odeslat" name="odeslat">
+             <div class="buttons">
+            <input class="submit" type="submit" value="Doporučit" name="odeslat">
              <input class="submit" type="submit" value="Pokračovat bez doporučení" name="pokracovat">
+             </div>
+
             {% if interest %}
             <h1> Poslední zvolený zájem: {{ interest }} </h1>
             {% endif %}

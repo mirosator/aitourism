@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>{{vysledek}}</title>
+<title>Mapa</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link
 href="https://fonts.googleapis.com/css?family=Open+Sans"
@@ -61,7 +61,6 @@ font-family: 'Open Sans', sans-serif;
 </style>
 </head>
 <body>
-    <h1>{{vysledek}}</h1>
 <div id="map"></div>
 
 <script>
@@ -85,21 +84,18 @@ var locations =
           49.72399367993908
         ]
       }
-    },
+    }, 
     {
       "type": "Feature",
-      "properties": {
-        title: 'Tohle je BOD!',
-        description: 'A zde bude popis bodu'
-      },
+      "properties": {},
       "geometry": {
         "type": "Point",
         "coordinates": [
-          13.365726470947266,
-          49.72323072777041
+          13.385038375854492,
+          49.74996851317638
         ]
       }
-    }, 
+    },
     {
       "type": "Feature",
       "properties": {
@@ -425,7 +421,7 @@ var locations =
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
-center: [13.354225158691406,49.71576703611501],
+center: [13.377485275268555,49.74029024858135],
 zoom: 12
 });
 
@@ -438,9 +434,20 @@ zoom: 12
 //locations[0].features.forEach(bod(locations[1].features[0], "marker"));
 //locations[1].features.forEach(bod("marker2"));
 
-pointsOnMap('{{vysledek[0]}}', "marker1");
-pointsOnMap('{{vysledek[1]}}', "marker2");
-pointsOnMap('{{vysledek[2]}}', "marker3");
+if ("{{vysledek}}"=="None") {
+
+  for (var i = 0; i < 9; i++) {
+    bod(locations[i].features[0], "marker3");
+    bod(locations[i].features[1], "marker3");
+    bod(locations[i].features[2], "marker3");
+    console.log(i);
+  }
+
+} else {
+  pointsOnMap('{{vysledek[0]}}', "marker1");
+  pointsOnMap('{{vysledek[1]}}', "marker2");
+  pointsOnMap('{{vysledek[2]}}', "marker3");
+}
 
 
 function pointsOnMap (i, markerType) {
